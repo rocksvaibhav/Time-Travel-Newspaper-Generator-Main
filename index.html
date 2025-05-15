@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Travel Newspaper Generator</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel = "stylesheet" href="./style.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+</head>
+
+<body>
+
+  <!-- Title -->
+  <!-- gradient-background -->
+
+  <section id="title" >
+    
+    <header class="  px-4 py-4 text-bg-dark">
+      <div class="container ">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+
+        
+            
+
+          <ul class="nav col-12 gap-2 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">  
+            
+
+            <li><a href="https://rocksvaibhav.github.io/Home/" class="btn btn-outline-light btn-lg px-4  style= font-size: 1.5rem" ></a></li>
+            <li><a href="https://rocksvaibhav.github.io/About/" class="btn btn-outline-light btn-lg px-4 style= font-size: 1.5rem"> About</a>
+            </li>
+            
+           
+            <div class="dropdown ">
+              <button class="btn btn-outline-light btn-lg px-4 style= font-size: 1.5rem dropdown-toggle" type="button" id="faqsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                FAQs
+              </button>
+
+              <ul class="dropdown-menu p-4" aria-labelledby="faqsDropdown" style="width: 50vw;">
+                <li><strong>How does it work?
+                </strong></li>
+                <li class="text-wrap mt-2">At Time Travel Times, we combine journalism with time travel to bring you the most comprehensive news coverage ever — literally across all of time.</li>
+                <li class="text-wrap mt-2">Here’s how it works:</li>
+
+                <li class="text-wrap mt-2">1. Chrono-Journalists on the Move
+                     	 </li>
+                <li class="text-wrap mt-2">Our elite reporters are equipped with ChronoTech™ devices that allow them to safely travel to any point in history — or the future. From covering the fall of the Roman Empire to live-streaming the Mars colonization in 2159, they go wherever the story is.
+                </li>
+                <li class="text-wrap mt-2">2. Time-Stamped Reports</li>
+                <li class="text-wrap mt-2">Every article is embedded with a temporal signature — meaning it’s verified, locked to its original time, and protected against paradoxes or tampering.</li>
+                
+                <li class="text-wrap mt-2">3. Non-Linear Publishing System</li>
+                
+                <li class="text-wrap mt-2">Our patented TimeFold™ Engine delivers content instantly to your device, regardless of your time zone or timeline. Yes, even before you click “subscribe.”</li>
+                
+                <li class="text-wrap mt-2">4. Reality-Safe Curation</li>
+                
+                <li class="text-wrap mt-2">We use advanced algorithms to scan for time-loop risks, spoilers, and paradox triggers before publishing. This ensures your news feed doesn’t accidentally break reality.</li>
+                
+                <li class="text-wrap mt-2">5. Customized Timeline Filters</li>
+
+                <li class = "text-wrap mt-2">Only want updates from the 1800s? Curious about next week’s stock market crash? You can fully customize your edition to show news from the past, present, future — or a blend.
+                </li>
+
+                <li class = "text-wrap mt-2" ><strong >I need help. How can I contact support?
+                </strong></li>
+
+                <li class = "text-wrap mt-2"> 🧭 Standard Support (All Timelines)</li>
+
+                <li class = "text-wrap mt-2">Email: 
+                  
+                  </li>
+
+                <li class = "text-wrap mt-2">suyashsharma942@gmail.com</li>
+
+                <li class = "text-wrap mt-2">vaibhavbatham20@gmail.com</li>
+
+                <li class = "text-wrap mt-2">vishalahirwar6401@gmail.com</li>
+
+                <li class = "text-wrap mt-2">ssmaner801108@gmail.com </li>
+
+                <li class = "text-wrap mt-2">Support Hours: 24/7/∞ (Time is relative, after all) </li>
+
+
+                
+                <li class = "text-wrap mt-2" ><strong >How much does a subscription cost?
+                </strong></li>
+
+                <li class = "text-wrap mt-2"> 
+                  🗞 Standard Subscription:1 Time Credit per Cycle
+                  Includes full access to past, present, and near-future editions.
+                  🔮 Premium Multiverse Pass (For advanced readers):
+                  5 Time Credits per Cycle</li>
+
+                
+                <li class = "text-wrap mt-2"> 
+                  •	Early access to future headlines </li>
+
+              
+                
+                <li class = "text-wrap mt-2"> 
+                  •	Alternate timeline editions</li>
+
+                
+                <li class = "text-wrap mt-2">•	Paradox-free browsing </li>
+
+                
+                <li class = "text-wrap mt-2">
+                  •	Invitations to exclusive temporal events </li>
+
+              </ul>
+            </div>
+
+
+          </ul>
+  
+          
+
+          
+          <form class="col-12  col-lg-auto  mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control form-control-dark text-bg-light"  style="font-size: 1.5rem  " placeholder="Search..." aria-label="Search" spellcheck="false" data-ms-editor="true">
+          </form>
+  
+          
+
+          
+          
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end  ">
+            <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal" style="font-size: 1.5rem " > 
+              Login
+            </button>
+        <!-- Sign-up Button -->
+          <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signupModal" style="font-size: 1.5rem"> Sign-up </button> 
+        
+          </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    </div>
+
+
+
+    <div class="container col-xxl-8 px-4 pt-5 ">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                
+                <img src="https://images.unsplash.com/photo-1566378246598-5b11a0d486cc?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"" alt="Bootstrap Themes" style="width:500px; height:700px;" loading="lazy" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1632207031562-b14b64039497?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="width:500px; height:700px;" loading="lazy" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1547316020-7fda801f2476?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  style="width:500px; height:700px;" loading="lazy"alt="...">
+              </div>
+          </div>
+      </div>
+    </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3  " style="font-family: serif; font-size: 5rem" >Time Travel Newspaper Generator</h1>
+          <p class="lead" style="font-family: serif; font-size: 1.75rem" >Welcome to the Time Travel Newspaper Project!
+            Journey through history from 1756 to 2025 with just a click.
+            
+            Explore authentic newspaper front pages from over two centuries.
+            Get a glimpse of the past and present, all in one place.
+            
+            Whether you're a history buff or just curious,
+            this project brings the timeline to life like never before.
+            
+            Easy-to-use interface with a year selector –
+            just pick a year and dive into that day's headlines.</p>
+         <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+          </div>-->
+        </div>
+      </div>
+    </div> 
+  </section>
+
+
+  <!-- Features -->
+  <section id="features" >
+
+          
+    <div class="container col-xxl-8 px-4 py-5 " >
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6" >
+        <!-- Year change Image – 🔧 ADDED ID -->
+        <img id="yearImage" src="https://images.unsplash.com/photo-1566378246598-5b11a0d486cc?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        alt="Bootstrap Themes" 
+        style="width:500px; height:700px;" 
+        loading="lazy">
+       
+        </div>
+
+
+        <div class="col-lg-6 "  >
+          
+          <h2 class="pb-2 border-bottom" style="font-family: serif; font-size: 3rem">Your Gateway to Historical Headlines</h2>
+         
+          <h2 class="fw-bold text-body-emphasis" style="font-family: serif; font-size: 2.5rem  "  >Select Year</h2>
+          
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+            
+          <select id="yearSelect" class="btn btn-light " style="width: 100%; max-width: 150px; font-size: 1.5rem; ">
+            <!-- Years will be populated dynamically -->
+          </select>
+
+          
+
+
+
+        <!-- 🔧 Fullscreen Button   gradient-background ADDED-->     
+          <button onclick="viewFullscreen()" class=" btn btn-primary btn-lg px-4 me-md-2  gradient-background"
+          style="margin-top: 10px; padding: 8px 16px; font-size: 1.5rem; cursor: pointer; ">
+          View Fullscreen
+          </button>
+         
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Testimonial -->
+    <section id="testimonial">
+
+    </section>
+
+
+ 
+
+  <!-- Footer -->
+  <section id="footer">
+
+
+    <!-- Footer -->
+  <section id="footer">
+    <div class="container px-4 py-5" id="hanging-icons">
+      <h2 class="pb-2 border-bottom"></h2>
+     <link rel="stylesheet" href="https://www.flaticon.com/free-icon/read-more_6202831?related_id=6202831">
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+           
+           
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+            </svg>
+
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis">Get in touch</h3>
+           <a href="fs-2"><i class='bx bxs-contact'></i></a>
+            <p>Stay in the loop and join our online community! Follow us on social media for the latest updates, behind-the-scenes content, exclusive offers, and more. Whether you're on Instagram, Facebook, Twitter, or LinkedIn, we’d love to connect with you. Let’s keep the conversation going—see you there!</p>
+            
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+           
+           
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+              </svg>
+
+            </div>
+
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+           
+           
+              <svg xmlns="http://www.w3.org/2000/svg"  height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>
+  
+            </div>
+
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+           
+              <svg xmlns="http://www.w3.org/2000/svg"  height="20" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+              </svg>
+
+            </div>
+
+
+            <a href="https://www.instagram.com/pratham_batham_/" class="btn btn-primary">
+              Get connected!
+              <i class='bx bxs-contact'></i>
+
+            </a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+            
+            <svg xmlns="http://www.w3.org/2000/svg"  height="30" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+            </svg>
+
+
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis">Privacy policy</h3>
+            <p>We value your privacy and are committed to protecting your personal information. Any data collected through our website, products, or services is used solely to enhance your experience and provide you with the best possible service. We do not sell, share, or distribute your information to third parties without your consent, unless required by law. All personal data is stored securely and handled in accordance with applicable data protection regulations. By using our services, you agree to the terms outlined in this Privacy Policy.</p>
+            <a href="https://www.instagram.com/__vishall_02?utm_source=qr&igsh=MTRyYjR0ZXYyeGkwYw==" class="btn btn-primary">
+              Know more!
+              <i class='bx bxs-up-arrow'></i>
+            </a>
+
+            
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+              <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+              <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+            </svg>
+
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis">Join us</h3>
+            <p>Don’t miss out on the latest news, updates, and exclusive offers from us! Subscribe to our newsletter and be the first to hear about new products, special promotions, and insights delivered straight to your inbox. Join our community today!</p>
+            <a href="https://www.instagram.com/suyash_sharma.ss?igsh=azZqazdneWI0MWV0" class="btn btn-primary">
+              Subscribe!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+<h5>© 2025 SV Foundations. All rights reserved.
+
+</h5>
+
+
+
+    
+  </section>
+
+
+    <!-- Sign Up Modal -->
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" novalidate>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+            <label for="loginEmail">Email address</label>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+            <label for="loginPassword">Password</label>
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        <hr>
+        <button type="button" class="btn btn-danger w-100" onclick="googleLogin()">
+          Login with Google
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Create Your Account</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" id="signupForm" novalidate>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" required>
+                <div class="invalid-feedback">Please enter a password.</div>
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" required>
+                <div class="invalid-feedback">Address is required.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" required>
+                <div class="invalid-feedback">City is required.</div>
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Chhattisgarh</option>
+                  <option>Goa</option>
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Manipur</option>
+                  <option>Meghalaya</option>
+                  <option>Mizoram</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Tripura</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>West Bengal</option>
+                  <option>Andaman and Nicobar Islands</option>
+                  <option>Chandigarh</option>
+                  <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                  <option>Delhi</option>
+                  <option>Lakshadweep</option>
+                  <option>Puducherry</option>
+                  <option>Ladakh</option>
+                  <option>Jammu and Kashmir</option>
+                  
+                </select>
+                <div class="invalid-feedback">Please select a state.</div>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip" required>
+                <div class="invalid-feedback">Zip code required.</div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                  <label class="form-check-label" for="gridCheck">
+                    I agree to the terms and conditions
+                  </label>
+                  <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+              </div>
+            </form>
+            <hr>
+            <button type="button" class="btn btn-danger w-100" onclick="googleLogin()">
+              Sign Up with Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script>
+      // Firebase Config
+    // Replace this block in <script> with your actual config
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "your-project-id.firebaseapp.com",
+  projectId: "your-project-id",
+  appId: "your-app-id",
+};
+
+  
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+  
+      // Google Login
+      function googleLogin() {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider)
+          .then((result) => {
+            alert("Signed in as " + result.user.displayName);
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      }
+  
+      // Form validation
+      (() => {
+        'use strict';
+        const form = document.querySelector('#signupForm');
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            event.preventDefault();
+            const email = document.getElementById("inputEmail4").value;
+            const password = document.getElementById("inputPassword4").value;
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userPassword", password);
+            alert("Sign-up successful! Data saved locally.");
+            const modal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+            modal.hide();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      })();
+    </script>
+
+
+
+
+<script> 
+// Year
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const yearSelect = document.getElementById('yearSelect');
+    
+    // Loop through 1756 to 2025 and create options
+    for (let year = 1756; year <= 2025; year++) {
+      const option = document.createElement('option');
+      option.value = year;
+      option.text = year;
+     yearSelect.appendChild(option);
+    }
+  
+
+
+     // Handle year change
+  yearSelect.addEventListener('change', function () {
+    const selectedYear = parseInt(yearSelect.value);
+    let imageUrl = '';
+    
+    switch (selectedYear) {
+
+
+      case 1756:
+    imageUrl = "https://secure-images.rarenewspapers.com/ebayimgs/4.17.2005/image012.jpg";
+    break;
+  case 1757:
+    imageUrl = "https://img.newspapers.com/img/img?user=4020836&id=971377285&clippingId=137533563&width=820&height=805&crop=1917_166_1704_1674&rotation=0";
+    break;
+  case 1758:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC7QXwyXfwMtBwYqpLmqfnFUswacySncwokw&s";
+    break;
+  case 1759:
+    imageUrl ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6oxpVq540L6yHNblm6PQdbrXdcLVTgSFP0A&s";
+    break;
+  case 1760:
+    imageUrl = "https://i.ebayimg.com/images/g/XhIAAMXQNOZRC8A5/s-l1200.jpg";
+    break;
+  case 1761:
+    imageUrl = "https://i.ebayimg.com/images/g/v7kAAOSwDy1eNdAE/s-l1200.jpg";
+    break;
+  case 1762:
+    imageUrl = "https://ia803407.us.archive.org/BookReader/BookReaderImages.php?zip=/3/items/sim_gentlemans-magazine_1762-02_32_2/sim_gentlemans-magazine_1762-02_32_2_jp2.zip&file=sim_gentlemans-magazine_1762-02_32_2_jp2/sim_gentlemans-magazine_1762-02_32_2_0000.jp2&id=sim_gentlemans-magazine_1762-02_32_2&scale=4&rotate=0";
+    break;
+  case 1763:
+    imageUrl = "https://i.ebayimg.com/images/g/~d4AAOSw~Jhm5Jjc/s-l400.jpg";
+    break;
+  case 1764:
+    imageUrl = "https://img.newspapers.com/img/img?user=962864&id=55650785&clippingId=2121855&width=820&height=1228&crop=212_128_4077_6109&rotation=0";
+    break;
+  case 1765:
+    imageUrl = "https://c8.alamy.com/comp/G15H4R/the-pennsylvania-journal-an-american-weekly-newspaper-published-by-G15H4R.jpg";
+    break;
+  case 1766:
+    imageUrl = "https://image.invaluable.com/housePhotos/Ahlers/52/763652/H5512-L360273165.jpg";
+    break;
+  case 1767:
+    imageUrl = "https://c8.alamy.com/comp/DEEC6Y/boycott-of-british-goods-adopted-by-boston-in-response-to-british-DEEC6Y.jpg";
+    break;
+  case 1768:
+    imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/52/DIEU_ET_MON_DROIT_.On_heraldic_shield_of_the_LONDON_GAZETTE_Monday_August_26%2C_1768-_Fitzroy_Gardens_Melbourne_AU_29_Oct2010_sRGB_web.jpg";
+    break;
+  case 1769:
+    imageUrl = "https://archives.novascotia.ca/images/newspapers/weeklyadvertiser/1769/200908310.jpg";
+    break;
+  case 1770:
+    imageUrl = "https://i1.wp.com/contingentmagazine.org/wp-content/uploads/2023/03/MI-header-image-scaled.jpg?fit=1170%2C659&ssl=1";
+    break;
+  case 1771:
+    imageUrl = "https://upload.wikimedia.org/wikipedia/commons/7/72/Relation_Aller_Fuernemmen_und_gedenckwuerdigen_Historien_%281609%29_%28cropped%29.jpg";
+    break;
+  case 1772:
+    imageUrl = "https://upload.wikimedia.org/wikipedia/commons/7/72/Relation_Aller_Fuernemmen_und_gedenckwuerdigen_Historien_%281609%29_%28cropped%29.jpg";
+    break;
+  case 1773:
+    imageUrl = "https://images-cdn.bridgemanimages.com/api/1.0/image/600wm.AQS.5897520.7055475/254806.jpg";
+    break;
+  case 1774:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6qApB0Jt2YV-od6s0GQOhHVe_pj0igLSdpw&s";
+    break;
+  case 1775:
+    imageUrl = "https://secure-images.rarenewspapers.com/ebayimgs/2.86.2015/image001.jpg";
+    break;
+  case 1776:
+    imageUrl = "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202501/bengal-gazette-294136443-16x9_0.jpeg?VersionId=yXdDgHsVfnzCiG5qFoc3DB3iubIPM3er&size=690:388";
+    break;
+  case 1777:
+    imageUrl = "https://vintagebooksmd.cdn.bibliopolis.com/pictures/15272_2.jpeg?auto=webp&v=1660848017";
+    break;
+  case 1778:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IHHi0dkB7rD9OTZ25xnPWag2Vw1cMnF2eg&s";
+    break;
+  case 1779:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4WDdGitRGgdCumO_bqGfjotnfUAXerVWmOQ&s";
+    break;
+  case 1780:
+    imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/53/India_Gazette_1780-11-25.png";
+    break;
+  case 1781:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOEpzr6GDzjhS9TM8XzNhv9Dd_y17cl2nKNw&s";
+    break;
+  case 1782:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOEpzr6GDzjhS9TM8XzNhv9Dd_y17cl2nKNw&s";
+    break;
+  case 1783:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOEpzr6GDzjhS9TM8XzNhv9Dd_y17cl2nKNw&s";
+    break;
+  case 1784:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0vJoxFZSY6zRXGI1VFkqi2SDTFYXN33L67w&s";
+    break;
+  case 1785:
+    imageUrl = "https://img.newspapers.com/img/img?user=2970201&id=39697930&clippingId=8853308&width=820&height=1469&crop=0_0_3698_6627&rotation=0";
+    break;
+  case 1786:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0vJoxFZSY6zRXGI1VFkqi2SDTFYXN33L67w&s";
+    break;
+  case 1787:
+    imageUrl = "https://www.cui.edu/portals/0/adam/blog%20app/x6uyb8ghres8ysceytlexw/thumbnail/october-1787-thumb.jpg?w=500&h=500&mode=max&scale=both";
+    break;
+  case 1788:
+    imageUrl = "https://news.google.com/newspapers?id=RKI6AAAAIBAJ&sjid=XioMAAAAIBAJ&pg=0%2C67910&img=1&hl=en&h=1633";
+    break;
+  case 1789:
+    imageUrl = "https://chroniclingamerica.loc.gov/iiif/2/vi_naturals_ver01%2Fdata%2Fsn84024710%2F00414184261%2F1813042401%2F0127.jp2/full/200,/0/default.jpg";
+    break;
+  case 1790:
+    imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Ephemeris_1790.png/800px-Ephemeris_1790.png";
+    break;
+  case 1791:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy7WDI5A8F1va_KBEhf0FfooNmA8R9VA06yQ&s";
+    break;
+  case 1792:
+    imageUrl = "https://exploreuk.uky.edu/dips/xt7t4b2x6w3k/data/Item_095/20874.jpg";
+    break;
+  case 1793:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy7WDI5A8F1va_KBEhf0FfooNmA8R9VA06yQ&s";
+    break;
+  case 1794:
+    imageUrl = "https://i.ebayimg.com/images/g/XbQAAOSw5n1j975~/s-l1200.jpg";
+    break;
+  case 1795:
+    imageUrl = "https://news.google.com/newspapers?id=MiIeAAAAIBAJ&sjid=bqoEAAAAIBAJ&pg=320%2C1636742&img=1&hl=en&h=1633";
+    break;
+  case 1796:
+    imageUrl = "https://chroniclingamerica.loc.gov/iiif/2/vi_alpina_ver01%2Fdata%2Fsn85025815%2F00542866573%2F1804071701%2F0004.jp2/full/200,/0/default.jpg";
+    break;
+  case 1797:
+    imageUrl = "https://bnl.contentdm.oclc.org/digital/api/singleitem/image/BermudaNP02/29053/default.jpg";
+    break;
+  case 1798:
+    imageUrl = "https://bnl.contentdm.oclc.org/digital/api/singleitem/image/BermudaNP02/24751/default.jpg";
+    break;
+  case 1799:
+    imageUrl = "https://chroniclingamerica.loc.gov/iiif/2/rp_beholder_ver02%2Fdata%2Fsn83025561%2F00514153152%2F1809102501%2F0112.jp2/full/200,/0/default.jpg";
+    break;
+  case 1800:
+    imageUrl = "https://i.pinimg.com/736x/dd/82/6d/dd826d34c0745631da8b896cd47d5fa7.jpg";
+    break;
+  case 1801:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3Gq5szYnUp8vNfr6FOsd7E0l6TUoAfwMcw&s";
+    break;
+  case 1802:
+    imageUrl = "https://gateway.okhistory.org/ark:/67531/metadc2172992/m1/1/high_res/";
+    break;
+  case 1803:
+    imageUrl = "https://www.brown.edu/Departments/Joukowsky_Institute/courses/13things/files/5196286.jpg";
+    break;
+  case 1804:
+    imageUrl = "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/mxgAAOSwwmplaOnX/$_57.JPG?set_id=880000500F";
+    break;
+  case 1805:
+    imageUrl = "https://img.newspapers.com/img/img?user=437159&id=98238928&clippingId=5491925&width=820&height=541&crop=0_0_4308_2843&rotation=0";
+    break;
+  case 1806:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGQR1JGtq12If90LdN_Ddb95-WaHy6uRlz8A&s";
+    break;
+  case 1807:
+    imageUrl = "https://tile.loc.gov/storage-services/service/mss/mtj/mtj1/037/0900/0914.gif";
+    break;
+  case 1808:
+    imageUrl = "https://www.readex.com/sites/default/files/styles/sample_docs_display/public/2021-04/Americas_Friend_published_as_AMERICAS_FRIEND._July_27_1808.jpg?itok=e3dVVMX0";
+    break;
+  case 1809:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1NGMEGzRTmJgEemsv2OxoSa-HJo3C5i7-Ng&s";
+    break;
+  case 1810:
+    imageUrl = "https://i.pinimg.com/originals/38/60/e5/3860e5dba3f62223646c497968ec6440.jpg";
+    break;
+  case 1811:
+    imageUrl = "https://i.dailymail.co.uk/i/pix/scaled/2012/12/26/article-2253270-16A79008000005DC-181_308x185.jpg";
+    break;
+  case 1812:
+    imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Java_government_gazette_04-07-1812_%28IA_ddd_010247542_mpeg21%29.pdf/page1-482px-Java_government_gazette_04-07-1812_%28IA_ddd_010247542_mpeg21%29.pdf.jpg";
+    break;
+  case 1813:
+    imageUrl = "https://i.dailymail.co.uk/i/pix/scaled/2012/12/26/article-2253270-16A79008000005DC-181_308x185.jpg";
+    break;
+  case 1814:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeEtRbx6GUN8-1DcMQ1vCWziE6qt5TzAC33g&s";
+    break;
+  case 1815:
+    imageUrl = "https://public-files.gumroad.com/n5qr94ka6ngzrfzfwvur9a9h7y1q";
+    break;
+  case 1816:
+    imageUrl = "https://texashistory.unt.edu/media/collection_icons/collection_ETXNP.jpg";
+    break;
+  case 1817:
+    imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/The_Bombay_Gazette%2C_17_December_1817_%28IA_dli.granth.23184%29.pdf/page1-2550px-The_Bombay_Gazette%2C_17_December_1817_%28IA_dli.granth.23184%29.pdf.jpg";
+    break;
+  case 1818:
+    imageUrl = "https://texashistory.unt.edu/media/collection_icons/collection_ETXNP.jpg";
+    break;
+  case 1819:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUUjnwgSKYzxnsKcimdvlh0AamJExcz-z6VA&s";
+    break;
+  case 1820:
+    imageUrl = "https://secure-images.rarenewspapers.com/ebayimgs/4.71.2006/image038.jpg";
+    break;
+  case 1821:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUUjnwgSKYzxnsKcimdvlh0AamJExcz-z6VA&s";
+    break;
+  case 1822:
+    imageUrl = "https://granthsanjeevani.com/jspui/bitstream/123456789/2540/1/NP_BCOU_18220216_TIT_01.jpg";
+    break;
+  case 1823:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKmFZnUWQnXkrZBIh4Ju10dj4Fmy14Vq0VA&s";
+    break;
+  case 1824:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMNvmGFKlNZ_ingxO9bX3zo-qtzDGIhV3PcQ&s";
+    break;
+    
+    case 1825:
+    imageUrl = "https://digital-classroom.nma.gov.au/sites/default/files/2020-07/1800s_1824_Firstfreepress_1.jpg?v=1"
+  case 1826:
+    imageUrl = "https://i.pinimg.com/1200x/1d/4f/70/1d4f70dcca815b466ecc00e8325f5e47.jpg";
+    break;
+  case 1827:
+    imageUrl = "https://gateway.okhistory.org/ark:/67531/metadc1806495/m1/1/med_res/";
+    break;
+  case 1828:
+    imageUrl = "https://upload.wikimedia.org/wikipedia/commons/e/e7/Cherokeephoenix-5-1828.png";
+    break;
+  case 1829:
+    imageUrl = "https://archives.novascotia.ca/images/newspapers/acadianrecorder/1829/201116537.jpg";
+    break;
+  case 1830:
+    imageUrl = "https://i.ebayimg.com/images/g/By8AAOSw3mtkSYGC/s-l1200.jpg";
+    break;
+  case 1831:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR50lxTi67QL9zpS8Ww_4Cd9QrkuXgKLAY95HaO_AoFlIWrsftwTM36bItc&amp;s=10";
+    break;
+  case 1832:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkk9Bp9xqhptt6GE-3nPsfn05sS1KejO9VuzQx-A9pzbRTMfAYOyA-RxHu&amp;s=10";
+    break;
+  case 1833:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3AAPC3v5pNQPvvGVb1wR9vhu59bwdrbj9nn9NAGD1ghL1tzpzRNpAbh7i&amp;s=10";
+    break;
+  case 1834:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9RmHF5n3XoVZFnlfR-Diojjz7Y_iaFwPo-zv68Dnws6OEfwXPKMlBXiho&amp;s=10";
+    break;
+  case 1835:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqIZk1UorqzfJkBzsoSTn87HOCb_ijO6JY43VI3Au7hPychkmk80REdju9&amp;s=10";
+    break;
+  case 1836:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCthbrvYjoexEOXwzEHhjrfmL6EzgbHJitqKMAPtzMPYdmhuPxPgzI-XTt&amp;s=10";
+    break;
+  case 1837:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrohBF8lJ6ercA53vNqvMFGbdP2ytEph-kTQ2sr30T3YRuOtStHeMfYEk&amp;s=10";
+    break;
+  case 1838:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmJAfz5tOtITS2wM5E2coOPSRDaNEHsJkkCEX0mwZtCKvh8mnP_d_c5pA&amp;s=10";
+    break;
+  case 1839:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3awtcDs3xCausECJWmGCzp5Kg4ychSHu_hTJd0hicKUDb286r-6cP1Q8l&amp;s=10";
+    break;
+  case 1840:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnAktoFJJOIQZtrzXmuOl7oaFL5K1Ncd9P7bKricfsJcpHiJ4DmyXuObs&amp;s=10";
+    break;
+  case 1841:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8DbV7CFJjOqZE4JqdUC3cGSA2-A7X0hKOWWRONWZ5CGjH6UXq3vln_cw&amp;s=10";
+    break;
+  case 1842:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKKtp15Vkt9HO1T7TrZvgwXCg1bKUmen6K72JR6hcrdHC_omFB5AIJ6dnb&amp;s=10";
+    break;
+  case 1843:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfHomIOxC_OTbHlrfHbQ_MEYNzA-op8QWQ_q6br0sDGBGWdvUQb0k8MXc&amp;s=10";
+    break;
+  case 1844:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNxxNT_T-c77XRM3fa_yfpmpoydXphDuZDFaHjJfEYnUUXu6qezI_Ppww&amp;s=10";
+    break;
+  case 1845:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDuNOkwY338nR-Q6SIiApPvyWLf-QKbLfiW7Q5rDF4r2CiN9pBqPr-BdWr&amp;s=10";
+    break;
+  case 1846:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEwqSosV-23sOeqOWzXoMv-xj5DmJUZIF3t7zMODi39O8_tSHUv5mkpFs&amp;s=10";
+    break;
+  case 1847:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1FM6e9ZJOnb2Uetl0gabIMjcJuy37gpWa2kn1CSrU0528pQZ2pMpJ97hS&amp;s=10";
+    break;
+  case 1848:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_5qYv8gl5A8FMgjebV8PdGR_JM73dwDpruSjcUecL-4Flr-hk5dyNStdC&amp;s=10";
+    break;
+  case 1849:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR71-zUVkFaDNaye9GPtvgZPXvoMm3OXNsu4L0bOZGdjpmsZw5GEpryiw2o&amp;s=10";
+    break;
+  case 1850:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfHomIOxC_OTbHlrfHbQ_MEYNzA-op8QWQ_q6br0sDGBGWdvUQb0k8MXc&amp;s=10";
+    break;
+  case 1851:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqGhgcVss6PGLNhAGG2IROW88Q9XbHXniRh_pGO6XuL_CUbVU0ruAOxY&amp;s=10";
+    break;
+  case 1852:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiq5lnCBAb82spD8ZF-3QKMp18zP2GLB7ESYrIxP1z_uWhRfkTyh2FfYw&amp;s=10";
+    break;
+  case 1853:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgub-ZgZexYdYgQxcx8v_Tp_VDjUl4It_K_rGGo1DPtFlM6Tb3JHRCsHR&amp;s=10";
+    break;
+  case 1854:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNfebZC0UKYrDnySYynBCLK5WeHjLHYBkgtNmFB5t1vmL_pWplGBPuRIk&amp;s=10";
+    break;
+  case 1855:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjIvcqtE2QD_AY5WYYQ3pQl3Dcdoau9umNIhpQ0c4aiiaFy90kUnpdSBw&amp;s=10";
+    break;
+  case 1856:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXILKrW7sE8_R3AQnavnX71FtAtxG30PS_mIjYbBYLLHl-LJ7mrHtluBh7&amp;s=10";
+    break;
+  case 1857:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8EwCICEpqWl_9VafHUZodni2nvi4HJvyXqndMm2RfRNwtPR2WH-fFUdF1&amp;s=10";
+    break;
+  case 1858:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_RzacxomSP-ekZclBvjhSGO_MywQlWyew2UZWvRjVpwm_ifOul4vpNd3o&amp;s=10";
+    break;
+  case 1859:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnpw_-Vm6f7NDWx62N-w-xDV3cU-KPxV7DQEHuzuH3uABTsYY_vXgV5j0&amp;s=10";
+    break;
+  case 1860:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9iDfsRaEKW7TIC6P_9mLrOwLqCyq07XAp2sTC-EZ2ptdAMw06DyV-420&amp;s=10";
+    break;
+  case 1861:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJwCsO_F_LBhuJ7iiKgm7efrluPUeMvxTtg4m_rWTrPHyvT9vxTfs-UhgZ&amp;s=10";
+    break;
+  case 1862:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxpeJAkEhOt1C1aGvBcBE-szJFbQKuKykqSSNAjifiUmdAaqKVOrwnzzp&amp;s=10";
+    break;
+  case 1863:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfFEPupdE9hqII7a2tIHugEAEcC2CU9dhbw_AIVR5pdRmJHmEkJ_My-gv&amp;s=10";
+    break;
+  case 1864:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsT4Z4tq9uOpN30Eo3KBfvipeJhFSkwStypobsAjRtaqN9YFpYoXHF-qPu&amp;s=10";
+    break;
+  case 1865:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG3cDweu5JtZn_e68KenKh5eYx-7hq19DA0NQ998O3wNWnwRoLApQGSLo&amp;s=10";
+    break;
+  case 1866:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMZde_WzWafT0mJ9M57mFRl7dweVfK2AOt-P70Wecv_uqc_I8C01-2eu4&amp;s=10";
+    break;
+  case 1867:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8NNC2teck0CuTBaF_epmmOnl9YEmnBextS2QEZ0WGAjKASazgT1Vx1Rc&amp;s=10";
+    break;
+  case 1868:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ajYqtuUGZ4gVw7cvmsBJQBSuWKCWLwyFEkeuLnl2a-F4XQPFzmEGaBU&amp;s=10";
+    break;
+  case 1869:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpdF2ZVd-Ft8djpwrd6dXTVj8gobN8TV9eRCNB5gdLqnjtPpC6N6-WwVE&amp;s=10";
+    break;
+  case 1870:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmB77q7j58v4fcBCKu12awt6IXFSm4YMJDUncb-gtUlJfXntUUDi2UB4Y&amp;s=10";
+    break;
+  case 1871:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZgcQ8lA6dO0daMnJlGqWmeBejtwdli_s83PGTObhIH-mnZ8y1NCe0Jqw&amp;s=10";
+    break;
+  case 1872:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm4rnpJ6ii_q1m4GgZl7YwKG828kqC1J8l9HzxG6ANsgfekENwzGgryp_f&amp;s=10";
+    break;
+  case 1873:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVBIAEbjjoHBjKrmDe-sjlWVYVuKtYpVBOIHyorg7GTfSieVf5lsJQv80&amp;s=10";
+    break;
+  case 1874:
+    imageUrl = "https://assets.isu.pub/document-structure/241010193047-363d15f61232ffdb571a920366d5082e/v1/e27e5c15b3a541998ef627ff3c4faedc.jpeg";
+    break;
+  case 1875:
+    imageUrl = "https://assets.isu.pub/document-structure/241010193047-363d15f61232ffdb571a920366d5082e/v1/cfb8068addcb8e19d3d0b036223f1230.jpeg";
+    break;
+  case 1876:
+    imageUrl = "https://assets.isu.pub/document-structure/241010193047-363d15f61232ffdb571a920366d5082e/v1/a329df8662a6a4b6b7865e98d7661802.jpeg";
+    break;
+  case 1877:
+    imageUrl = "https://assets.isu.pub/document-structure/241010193047-363d15f61232ffdb571a920366d5082e/v1/6b630d1b028151be72f9e54a4055c236.jpeg";
+    break;
+  case 1878:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQczHwIvJuJfGwbon8v_rI8sSdKHwaypTJGifM0QpU4uJLklmGpnEBa_mev&amp;s=10";
+    break;
+  case 1879:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSlY3x70syVDbQFoeYqHmfiMLcBQXbZflJI_Z13dauuOGofjL32H5EnnM&amp;s=10";
+    break;
+  case 1880:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMiSUM5ibyWzN2-borEPceOey06uAzoig_wmwwyCI6F9g1vlk1PjOLPTHB&amp;s=10";
+    break;
+  case 1881:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-ygcY99qMtQKs_zNf0Wbg3lY-CHSIsl3Hptvh1q3vyWpulyleQ95I1jDj&amp;s=10";
+    break;
+  case 1882:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXUH3ASXB7784weMBGi-jW7CLd8XhKQ3v7t6qJH-O73coAwD9aKfxeGPgv&amp;s=10";
+    break;
+  case 1883:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpTBSxyeAyGWDuoqj18ThRyNbVI3SMwhEGt1p8jCn8b635wJIk0Z0RAn8&amp;s=10";
+    break;
+  case 1884:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXgT66kzAjV1U3IYQCtUbdXYRHo6jycg2fstFkdljy8Sp4jH2HEvb48_U&amp;s=10";
+    break;
+  case 1885:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgK3sEG_GsAUVjOK1eSfz1D7AtDHE6qJb8ocFO5zw0hyO3W5lGIQbqYLQ&amp;s=10";
+    break;
+  case 1886:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFcP09gb0vZaqEkvllk1UvAQCZk-V4roCvdf2LZ3O7vZkg_Tbq6dLsuxDb&amp;s=10";
+    break;
+  case 1887:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoz4EC87vJrogljMBKurTsMRloDqGUYDFtuZjMLfrW7bK6aM5JCNaun6c&amp;s=10";
+    break;
+  case 1888:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1g7OoNhTEXagvHPKMIYLKqfgo-wHCkNL9doSJoyc5wYtcD8hUQlEPGk&amp;s=10";
+    break;
+  case 1889:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv1_o-KlnSTFeP-3YSAqSRMKdpsHwAx7O6P_iXhwgNPecnf3PxYnqAfkab&amp;s=10";
+    break;
+  case 1890:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWXF65rDcXJCPYJoxkbAuhPV54pbMEFXcfto2XLCX88-r7Lzu4Fm6nesbq&amp;s=10";
+    break;
+    case 1891:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7VD3d8oAzHKsNmgxtdYB4aePJynY1Fp2GFEzIc2uoXqWJeQzp6AvIvvU&amp;s=10";
+    break;
+    case 1892:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRthoxzzwZRv6busGgHpVTgWL0nYN6_YW3Qk-MCXDvs2D78ewWBuPd6d8-k&amp;s=10";
+    break;
+    case 1893:
+    imageUrl = "https://blog.britishnewspaperarchive.co.uk/wp-content/uploads/2017/05/Lusitania_header2-940x400.png";
+    break;
+    case 1894:
+    imageUrl = "https://granthsanjeevani.com/jspui/bitstream/123456789/32226/1/NP_BG_18940313_TIT_01.jpg";
+    break;
+    case 1895:
+    imageUrl = "https://www.granthsanjeevani.com/jspui/bitstream/123456789/105477/1/NP_TOI_18950919_TIT_01.jpg";
+    break;
+    case 1896:
+    imageUrl = "https://mdh.contentdm.oclc.org/iiif/2/msui1:102449/full/730,/0/default.jpg";
+    break;
+    case 1897:
+    imageUrl = "https://odishapostepaper.com/uploads/epaper/2025-04/68113ad24b27c.jpg";
+    break;
+    case 1898:
+    imageUrl = "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_greenwich_ver01:data:sn86071545:00216955973:1898051101:0001/full/pct:12.5/0/default.jpg";
+    break;
+
+    case 1899:
+    imageUrl = "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_ibizanhound_ver01:data:sn83045462:00280655259:1899041901:0778/full/pct:12.5/0/default.jpg";
+    break;
+
+  
+    case 1900:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+     case 1901:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+     case 1902:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+     case 1903:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0007.jp2/full/200,/0/default.jpg";
+    break;
+     case 1904:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+     case 1905:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898053001%2F1015.jp2/full/200,/0/default.jpg";
+    break;
+     case 1906:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0010.jp2/full/200,/0/default.jpg";
+    break;
+     case 1907:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+     case 1908:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+     case 1909:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0008.jp2/full/200,/0/default.jpg";
+    break;
+     case 1910:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+     case 1911:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+     case 1912:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0007.jp2/full/200,/0/default.jpg";
+    break;
+     case 1913:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+     case 1914:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898053001%2F1015.jp2/full/200,/0/default.jpg";
+    break;
+     case 1915:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0010.jp2/full/200,/0/default.jpg";
+    break;
+     case 1916:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+    case 1917:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+  case 1918:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0008.jp2/full/200,/0/default.jpg";
+    break;
+  case 1919:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+  case 1920:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1921:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1922:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0007.jp2/full/200,/0/default.jpg";
+    break;
+  case 1923:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1924:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898053001%2F1015.jp2/full/200,/0/default.jpg";
+    break;
+  case 1925:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0010.jp2/full/200,/0/default.jpg";
+    break;
+  case 1926:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1927:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+  case 1928:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0008.jp2/full/200,/0/default.jpg";
+    break;
+  case 1929:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+  case 1930:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1931:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0007.jp2/full/200,/0/default.jpg";
+    break;
+  case 1932:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1933:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898053001%2F1015.jp2/full/200,/0/default.jpg";
+    break;
+  case 1934:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0010.jp2/full/200,/0/default.jpg";
+    break;
+  case 1935:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1936:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+  case 1937:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0008.jp2/full/200,/0/default.jpg";
+    break;
+  case 1938:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+  case 1939:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1940:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1941:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0007.jp2/full/200,/0/default.jpg";
+    break;
+  case 1942:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1943:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898053001%2F1015.jp2/full/200,/0/default.jpg";
+    break;
+  case 1944:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0010.jp2/full/200,/0/default.jpg";
+    break;
+  case 1945:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1946:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+  case 1947:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0008.jp2/full/200,/0/default.jpg";
+    break;
+  case 1948:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+  case 1949:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1950:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0007.jp2/full/200,/0/default.jpg";
+    break;
+  case 1951:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+  case 1952:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898053001%2F1015.jp2/full/200,/0/default.jpg";
+    break;
+  case 1953:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0010.jp2/full/200,/0/default.jpg";
+    break;
+  case 1954:
+    ImageURL = "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+
+     case 1955:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+     case 1956:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0008.jp2/full/200,/0/default.jpg";
+    break;
+     case 1957:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0016.jp2/full/200,/0/default.jpg";
+    break;
+     case 1958:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    break;
+     case 1959:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031601%2F0007.jp2/full/200,/0/default.jpg";
+    Break;
+     case 1960:
+    ImageURL =
+     "https://chroniclingamerica.loc.gov/iiif/2/nn_stein_ver01%2Fdata%2Fsn83030272%2F00175042994%2F1898031801%2F0027.jp2/full/200,/0/default.jpg";
+    Break;
+    case 1961:
+    imageUrl = "https://america.cgtn.com/wp-content/uploads/2016/04/space_flight.american_paper-468x360.jpg";
+    break;
+  case 1962:
+    imageUrl = "https://static01.nyt.com/images/2022/10/19/learning/lesson-plans/oakImage-1666199350763/oakImage-1666199350763-superJumbo-v3.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1963:
+    imageUrl = "https://static01.nyt.com/images/section/learning/general/onthisday/big/0828_big.gif";
+    break;
+  case 1964:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1964/09/13/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1965:
+    imageUrl = "https://static01.nyt.com/images/2015/08/20/insider/civilrights1/civilrights1-articleLarge.jpg?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1966:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1966/08/05/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1967:
+    imageUrl = "https://static01.nyt.com/images/2017/08/27/insider/24insider-forum-4/24insider-forum-4-articleLarge.jpg?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1968:
+    imageUrl = "https://static01.nyt.com/newsgraphics/2016/11/01/front-pages/43d39ce787b695fe705257b340b8e25ea2696098/08ELECT-1972-original.jpg";
+    break;
+  case 1969:
+    imageUrl = "https://static01.nyt.com/images/2009/07/20/science/space/14mission-a1.ready/14mission-a1.ready-superJumbo-v2.jpg";
+    break;
+  case 1970:
+    imageUrl = "https://static01.nyt.com/images/2020/04/21/climate/21CLI-EARTHDAYHISTORY/21CLI-EARTHDAYHISTORY-articleLarge.jpg?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1971:
+    imageUrl = "https://static01.nyt.com/images/2014/10/09/blogs/tbt4/tbt4-blog480.png";
+    break;
+  case 1972:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1972/06/18/170530202_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1973:
+    imageUrl = "https://static01.nyt.com/images/2015/07/30/blogs/insider-trump3/insider-trump3-blog480.jpg";
+    break;
+  case 1974:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1975/01/01/109378758_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1975:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1975/10/21/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1976:
+    imageUrl = "https://static01.nyt.com/images/section/learning/general/onthisday/big/0704_big.gif";
+    break;
+  case 1977:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1977/08/19/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1978:
+    imageUrl = "https://static01.nyt.com/images/2008/11/15/nyregion/15about01-500.jpg?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1979:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1979/02/04/112847710_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1980:
+    imageUrl = "https://static01.nyt.com/images/section/learning/general/onthisday/big/0222_big.gif";
+    break;
+  case 1981:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1981/11/01/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1982:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1982/08/15/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1983:
+    imageUrl = "https://static01.nyt.com/images/2014/10/29/blogs/tbt2/tbt2-tmagArticle.jpg";
+    break;
+  case 1984:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1984/01/09/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1985:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1985/11/27/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1986:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1986/06/20/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1987:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1987/09/27/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1988:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1988/12/29/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1989:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1989/12/03/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1990:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1990/12/21/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1991:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1991/11/04/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1992:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1992/05/31/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1993:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1993/11/15/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1994:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1994/04/10/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1995:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1995/12/25/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1996:
+    imageUrl = "https://s1.nyt.com/timesmachine/pages/1/1996/01/22/front_page_360W.png?quality=75&amp;auto=webp&amp;disable=upscale";
+    break;
+  case 1997:
+    imageUrl = "https://static01.nyt.com/images/2014/10/07/sports/BACKBACK-TIMES/BACKBACK-TIMES-popup.jpg";
+    break;
+  case 1998:
+    imageUrl = "https://static01.nyt.com/images/section/learning/general/onthisday/big/1219_big2.JPG";
+    break;
+  case 1999:
+    imageUrl = "https://static01.nyt.com/images/section/learning/general/onthisday/big/0212_big2.JPG";
+    break;
+  case 2000:
+    imageUrl = "https://static01.nyt.com/newsgraphics/2016/11/01/front-pages/43d39ce787b695fe705257b340b8e25ea2696098/08ELECT-2000v1-original.jpg";
+    break;
+  case 2001:
+    imageUrl = "https://static01.nyt.com/images/2002/09/11/nyregion/nat_911A1_760pix.jpg";
+    break;
+  case 2002:
+    imageUrl = "https://static01.nyt.com/images/2002/07/23/nytfrontpage/scan.jpg";
+    break;
+  case 2003:
+    imageUrl = "https://static01.nyt.com/images/2003/10/20/nytfrontpage/scan.jpg";
+    break;
+  case 2004:
+    imageUrl = "https://static01.nyt.com/images/2004/06/04/nytfrontpage/scan.jpg";
+    break;
+  case 2005:
+    imageUrl = "https://imgv2-1-f.scribdassets.com/img/document/52520159/original/755a00393d/1?v=1";
+    break;
+  case 2006:
+    imageUrl = "https://static01.nyt.com/images/2006/05/09/nytfrontpage/scan_paper.jpg";
+    break;
+  case 2007:
+    imageUrl = "https://static01.nyt.com/images/2007/08/07/nytfrontpage/scan_paper.jpg";
+    break;
+  case 2008:
+    imageUrl = "https://static01.nyt.com/images/2009/12/29/nytfrontpage/scan.jpg";
+    break;
+  case 2009:
+    imageUrl = "https://static01.nyt.com/images/2009/12/29/nytfrontpage/scan.jpg";
+    break;
+  case 2010:
+    imageUrl = "https://static01.nyt.com/images/2010/01/22/nytfrontpage/scan.jpg";
+    break;
+  case 2011:
+    imageUrl = "https://static01.nyt.com/images/2011/05/02/nytfrontpage/scannat_paper.jpg";
+    break;
+  case 2012:
+    imageUrl = "https://static01.nyt.com/images/2012/12/15/nytfrontpage/scan_paper.jpg";
+    break;
+  case 2013:
+    imageUrl = "https://static01.nyt.com/images/2013/04/16/nytfrontpage/scannat_paper.jpg";
+    break;
+  case 2014:
+    imageUrl = "https://static01.nyt.com/images/2014/03/18/nytfrontpage/scan_paper.jpg";
+    break;
+  case 2015:
+    imageUrl = "https://static01.nyt.com/images/2015/06/27/nytfrontpage/scannat_paper.jpg";
+    break;
+  case 2016:
+    imageUrl = "https://static01.nyt.com/newsgraphics/2016/11/01/front-pages/43d39ce787b695fe705257b340b8e25ea2696098/08ELECT-2008-original.jpg";
+    break;
+  case 2017:
+    imageUrl = "https://static01.nyt.com/images/2017/01/22/nytfrontpage/scan_paper.jpg";
+    break;
+  case 2018:
+    imageUrl = "https://static01.nyt.com/images/2018/12/25/nytfrontpage/scan.jpg";
+    break;
+  case 2019:
+    imageUrl = "https://static01.nyt.com/images/2019/03/19/nytfrontpage/scan.jpg";
+    break;
+  case 2020:
+    imageUrl = "https://static01.nyt.com/images/2020/06/29/nytfrontpage/scan.jpg";
+    break;
+  case 2021:
+    imageUrl = "https://static01.nyt.com/images/2021/01/29/nytfrontpage/scan.jpg";
+    break;
+  case 2022:
+    imageUrl = "https://static01.nyt.com/images/2022/01/22/nytfrontpage/scan.jpg";
+    break;
+  case 2023:
+    imageUrl = "https://static01.nyt.com/images/2023/03/31/nytfrontpage/scan.jpg";
+    break;
+  case 2024:
+    imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkcthIeHoeAuwMGRi_4SsOrw6yjAuFBV_2Pw&amp;s";
+    break;
+       
+  case 2025:
+     imageUrl = "https://static01.nyt.com/images/2025/01/02/nytfrontpage/scan.jpg";
+     break;
+
+  default:
+      imageUrl = "https://via.placeholder.com/500x700.png?text=No+Image+Available"; // fallback image
+    }
+
+    yearImage.src = imageUrl;
+  });
+  yearSelect.value = "1756";
+  yearSelect.dispatchEvent(new Event('change'));
+});
+
+ // 🔧 Fullscreen function
+ function viewFullscreen() {
+  const img = document.getElementById("yearImage");
+  if (img.requestFullscreen) {
+    img.requestFullscreen();
+  } else if (img.webkitRequestFullscreen) { /* Safari */
+    img.webkitRequestFullscreen();
+  } else if (img.msRequestFullscreen) { /* IE11 */
+    img.msRequestFullscreen();
+  }
+}
+
+document.getElementById('downloadBtn').addEventListener('click', function () {
+  const image = document.getElementById('yearImage');
+  const imageUrl = image.src;
+
+  if (!imageUrl) {
+    alert("No image selected to download.");
+    return;
+  }
+
+  // Create a hidden link element
+  const link = document.createElement('a');
+  link.href = imageUrl;
+  link.download = `newspaper_${yearSelect.value}.jpg`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+
+
+
+
+
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
